@@ -1,0 +1,59 @@
+.card {
+  background: var(--tg-secondary-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.card:active { transform: scale(0.97); }
+
+.img {
+  width: 100%;
+  aspect-ratio: 1;
+  position: relative;
+  background: var(--tg-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.noImg { font-size: 40px; }
+
+.soldBadge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.body { padding: 8px; }
+
+.price {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--tg-text);
+}
+
+.title {
+  font-size: 13px;
+  color: var(--tg-text);
+  margin-top: 2px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.meta {
+  font-size: 11px;
+  color: var(--tg-hint);
+  margin-top: 4px;
+}

@@ -1,0 +1,25 @@
+{
+	email {$TLS_EMAIL}
+}
+
+{$DOMAIN} {
+	encode zstd gzip
+
+	# API и загруженные файлы → FastAPI backend
+	handle /api/* {
+		reverse_proxy backend:8000
+	}
+	handle /uploads/* {
+		reverse_proxy backend:8000
+	}
+
+	# Всё остальное → React Mini App (SPA)
+	handle {
+		reverse_proxy frontend:80
+	}
+
+	log {
+		output stdout
+		format console
+	}
+}

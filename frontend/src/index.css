@@ -1,0 +1,51 @@
+:root {
+  --tg-bg: var(--tg-theme-bg-color, #ffffff);
+  --tg-text: var(--tg-theme-text-color, #000000);
+  --tg-hint: var(--tg-theme-hint-color, #999999);
+  --tg-link: var(--tg-theme-link-color, #2481cc);
+  --tg-button: var(--tg-theme-button-color, #2481cc);
+  --tg-button-text: var(--tg-theme-button-text-color, #ffffff);
+  --tg-secondary-bg: var(--tg-theme-secondary-bg-color, #f0f0f0);
+
+  --radius: 12px;
+  --gap: 12px;
+}
+
+body {
+  background: var(--tg-bg);
+  color: var(--tg-text);
+  min-height: 100vh;
+}
+
+a { color: var(--tg-link); text-decoration: none; }
+
+button {
+  cursor: pointer;
+  border: none;
+  background: var(--tg-button);
+  color: var(--tg-button-text);
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 20px;
+  width: 100%;
+  transition: opacity 0.15s;
+}
+button:active { opacity: 0.8; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+input, textarea, select {
+  width: 100%;
+  border: 1.5px solid var(--tg-secondary-bg);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  font-size: 15px;
+  background: var(--tg-bg);
+  color: var(--tg-text);
+  outline: none;
+  transition: border-color 0.15s;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--tg-button);
+}
+textarea { resize: vertical; min-height: 80px; }

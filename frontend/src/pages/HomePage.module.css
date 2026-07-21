@@ -1,0 +1,51 @@
+.page {
+  padding: 12px 12px 80px;
+}
+
+.searchBar {
+  margin-bottom: 12px;
+}
+
+.categories {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+  margin-bottom: 12px;
+}
+.categories::-webkit-scrollbar { display: none; }
+
+.catBtn {
+  white-space: nowrap;
+  background: var(--tg-secondary-bg);
+  color: var(--tg-text);
+  font-weight: 400;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  width: auto;
+}
+.catBtn.catActive {
+  background: var(--tg-button);
+  color: var(--tg-button-text);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+}
+
+.empty {
+  text-align: center;
+  color: var(--tg-hint);
+  padding: 40px 0;
+  font-size: 15px;
+}
+
+.loadMore {
+  margin-top: 16px;
+  background: var(--tg-secondary-bg);
+  color: var(--tg-text);
+}
