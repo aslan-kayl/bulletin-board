@@ -15,9 +15,4 @@ export default defineConfig({
       "/uploads": { target: "http://localhost:8000", changeOrigin: true },
     },
   },
-  define: {
-    // In production the Mini App is served from the same origin as the API (via Nginx),
-    // so VITE_API_URL should be empty — all requests go to relative paths.
-    "import.meta.env.VITE_API_URL": JSON.stringify(process.env.VITE_API_URL ?? ""),
-  },
 });

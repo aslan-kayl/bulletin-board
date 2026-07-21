@@ -23,7 +23,11 @@ export function HomePage() {
       setLoading(true);
       try {
         const data = await api.getListings({ page: p, category_id: categoryId, search });
-        setListings(p === 1 ? data.items : (prev) => [...prev, ...data.items]);
+        if (p === 1) {
+          setListings(data.items);
+        } else {
+          setListings((prev) => [...prev, ...data.items]);
+        }
         setPages(data.pages);
         setPage(p);
       } finally {
